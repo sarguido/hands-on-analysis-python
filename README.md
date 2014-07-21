@@ -68,5 +68,5 @@ A: Aw man! There are just so many things!
 
 Q: What's your twitter handle again?
 
-A: @sarah_guido
+A: [@sarah_guido](http://twitter.com/sarah_guido)
 
