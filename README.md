@@ -17,13 +17,13 @@ If you have installed a distribution like Anaconda or Enthought, you have IPytho
 - git clone this repo OR download it as a zip and unzip it to your Desktop
 - open the terminal/command line and cd into hands-on-analysis-python/ and type: <code>pip install -r requirements.txt</code>
 - open the terminal/command line and cd into hands-on-analysis-python/notebooks
-- in your terminal, type: ipython notebook --pylab 
+- in your terminal, type: <code>ipython notebook --pylab</code> 
 
 ### Option 2: Code files
 
 If you didn't install these tools with a distribution, you can still run the code files in the code/directory in your terminal. You'll have to uncomment the print statements, and recomment if you wish, as we go.
 
-To run, cd into hands-on-analysis-python/code and type python pandas_lessons.py
+To run, cd into hands-on-analysis-python/code and type: <code>python pandas_lessons.py</code>
 
 ### Option 3: Wakari.io
 
