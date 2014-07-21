@@ -39,10 +39,14 @@ Wakari.io is a platform for web-based Python data analysis. It also allows you t
 
 If none of these options work, or you just want to watch now and code later, you can follow along below. It's not interactive, but you'll be able to see what's happening.
 
-- Pandas:
+- Pandas: http://nbviewer.ipython.org/gist/sarguido/b91f917a8cd443eb33ad
 - Scikit-learn:
 - Matplotlib:
 - Data analysis:
+
+# Questions
+
+https://docs.google.com/document/d/1tY6ifr4m4h2Ri445Vro1ZKr7Kap0X1IcI2OGl7IDaU0/edit?usp=sharing
 
 
 # FAQs
