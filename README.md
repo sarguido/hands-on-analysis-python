@@ -30,7 +30,8 @@ Wakari.io is a platform for web-based Python data analysis. It also allows you t
 
 - go here https://www.wakari.io/
 - when you register, it might give you a message that "we're at capacity for this plan" or something. Ignore it and click on the Wakari logo in the top left corner.
-- Then, click this link: https://www.wakari.io/notebook/bundles/hands_on_data_analysis/notebooks/
+- Then, click this link: https://www.wakari.io/sharing/bundle/sarguido89/hands_on_data_analysis
+- Click on "run/edit this notebook"
 - You should be good to go
 
 ### Option 4: Follow along on the web
