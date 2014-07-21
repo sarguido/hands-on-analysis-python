@@ -1,4 +1,4 @@
-
+from numpy import mean, std
 # coding: utf-8
 
 # # Pandas (code file pandas_lessons.py)
@@ -48,7 +48,7 @@ import pandas as pd
 some_numbers = [2, 5, 7, 3, 8]
 
 series_1 = pd.Series(some_numbers)
-series_1
+#print series_1
 
 
 # To specify an index, you can also pass in a list.
@@ -58,14 +58,12 @@ series_1
 ind = ['a', 'b', 'c', 'd', 'e']
 
 series_2 = pd.Series(some_numbers, index=ind)
-series_2
+#print series_2
 
 
 # We can pull that index back out again, too, with the index attribute.
 
-
-
-series_2.index
+#print series_2.index
 
 
 # You can also create a Series with a dictionary. The keys of the dictionary will be used as the index, and the values will be used as the Series array.
@@ -75,7 +73,7 @@ series_2.index
 more_numbers = {'a': 9, 'b': 'eight', 'c': 7.5, 'd': 6}
 
 series_3 = pd.Series(more_numbers)
-series_3
+#print series_3
 
 
 # Notice how, in that previous example, I created a Series with integers, a float, and a string.
@@ -87,14 +85,14 @@ series_3
 
 
 combine_series = pd.DataFrame([series_2, series_3])
-combine_series
+#print combine_series
 
 
 # Notice how in column 'b', we have two kinds of data. If a column in a DataFrame contains multiple types of data, the data type (or dtype) of the column will be chosen to accomodate all of the data. We can look at the data types of different columns with the dtypes attribute. Object is the most general, which is what has been chosen for column 'b'.
 
 
 
-combine_series.dtypes
+#print combine_series.dtypes
 
 
 # Another way to create a DataFrame is with a dictionary of lists. This is pretty straightforward:
@@ -105,7 +103,7 @@ data = {'col1': ['i', 'love', 'pandas', 'so', 'much'],
         'col2': ['so', 'will', 'you', 'i', 'promise']}
 
 df = pd.DataFrame(data)
-df
+#print df
 
 
 # ## File I/O
@@ -115,7 +113,7 @@ df
 
 
 wine = pd.read_csv('../data/wine.csv')
-wine.head()
+#print wine.head()
 
 
 # Reading in a text file is just as easy. Make sure to pass in '\t' to the delimter parameter.
@@ -123,7 +121,7 @@ wine.head()
 
 
 auto_mpg = pd.read_csv('../data/auto_mpg.txt', delimiter="\t")
-auto_mpg.head()
+#print auto_mpg.head()
 
 
 # ## Exploring the data
@@ -131,29 +129,27 @@ auto_mpg.head()
 # Here are some different ways to explore the data we have. You've already seen the head() function, which returns the first five lines in the dataset. To grab the last 5 lines, you can use the tail() function:
 
 
-
-auto_mpg.tail()
+#print auto_mpg.tail()
 
 
 # Getting column names from a DataFrame is also easy and can be done using the 'columns' attribute.
 
 
-
-wine.columns
+#print wine.columns
 
 
 # Another useful thing you can do is generate some summary statistics using the describe() function. The describe() function calculates descriptive statistics like the mean, standard deviation, and quartile values for continuous and integer data that exist in your dataset. Don't worry, Pandas won't try to calculate the standard deviation of your categorical values!
 
 
 
-wine.describe()
+#print wine.describe()
 
 
 # Another useful thing you can do to explore your data is to sort it. Let's say we wanted to sort our auto_mpg DataFrame by mpg. This is very easy as well:
 
 
 
-auto_mpg.sort(columns='mpg').tail()
+#print auto_mpg.sort(columns='mpg').tail()
 
 
 # ## Lesson: let's see what's going on in our data!
@@ -161,11 +157,10 @@ auto_mpg.sort(columns='mpg').tail()
 # This dataset is data on credit approvals. The column names and data were changed to protect the confidentiality of the data.
 
 
-
 f = '../data/credit_approval.csv'
 
-# How do you read in that file?
-credit_approval = #your code here
+# How do you read in that file? Uncomment and fill in.
+#credit_approval = your code here
 
 # Can you grab just the column names?
 
@@ -201,50 +196,49 @@ credit_approval = #your code here
 # Let's select just the mpg column from the auto_mpg DataFrame. This works similar to how you would access values from a dictionary:
 
 
-
-auto_mpg['mpg']
+#print auto_mpg['mpg']
 
 
 # You can do exactly the same thing by using mpg as an attribute:
 
 
 
-auto_mpg.mpg
+#print auto_mpg.mpg
 
 
 # To extract rows from a DataFrame, you can use the slice method, similar to how you would slice a list. Here's how we would grab rows 7-13 from the wine DataFrame:
 
 
 
-wine[7:14]
+#print wine[7:14]
 
 
 # Pandas also has tools for purely label-based selection of rows and columns using the loc attribute. The loc indexer takes input as [row, column]. For example, let's say we wanted to select the abv value in the 8th instance in our wine DataFrame:
 
 
 
-wine.loc[8,'abv']
+#print wine.loc[8,'abv']
 
 
 # We can also use loc to grab slices. Let's grab the abv for rows 8 to 11 from the wine DataFrame.
 
 
 
-wine.loc[8:11, 'abv']
+#print wine.loc[8:11, 'abv']
 
 
 # And, as you might expect, we can select multiple columns by passing in a list of column names. Let's also grab ash and color for rows 8 to 11.
 
 
 
-wine.loc[8:11, ['abv', 'ash', 'color']]
+#print wine.loc[8:11, ['abv', 'ash', 'color']]
 
 
 # Finally, let's just grab all columns for rows 8 to 11.
 
 
 
-wine.loc[8:11, :]
+#print wine.loc[8:11, :]
 
 
 # So, loc provides functionality for a very specific and precise selection method.
@@ -253,21 +247,21 @@ wine.loc[8:11, :]
 
 
 
-auto_mpg.iloc[60, 6]
+#print auto_mpg.iloc[60, 6]
 
 
 # To grab rows 60-63 and the last three columns from the auto_mpg DataFrame, we would need to do the following:
 
 
 
-auto_mpg.iloc[60:64, 6:9]
+#print auto_mpg.iloc[60:64, 6:9]
 
 
 # And to grab all values and those last three columns from the auto_mpg DataFrame:
 
 
 
-auto_mpg.iloc[:, 6:9]
+#print auto_mpg.iloc[:, 6:9]
 
 
 # One of my favorite methods for selecting data is through boolean indexing. Boolean indexing is similar to the WHERE clause in SQL in that it allows you to filter out data based on certain criteria. Let's see how this works.
@@ -276,14 +270,14 @@ auto_mpg.iloc[:, 6:9]
 
 
 
-wine[wine['wine_type'] == 1]
+#print wine[wine['wine_type'] == 1]
 
 
 # This works with any comparison operators, like >, < >=, !=, and so on. For example, we can select everything from the wine DataFrame where the value in the magnesium column is less than 100.
 
 
 
-wine[wine['magnesium'] < 100]
+#print wine[wine['magnesium'] < 100]
 
 
 # You can also say 'not' with the tilde: ~
@@ -292,7 +286,7 @@ wine[wine['magnesium'] < 100]
 
 
 
-wine[~wine['magnesium'] < 100]
+#print wine[~wine['magnesium'] < 100]
 
 
 # It's also possible to combine these boolean indexers. Make sure you enclose them in parentheses. This is something I usually forget.
@@ -301,14 +295,14 @@ wine[~wine['magnesium'] < 100]
 
 
 
-wine[(wine['magnesium'] < 100) & (wine['wine_type'] == 1)]
+#print wine[(wine['magnesium'] < 100) & (wine['wine_type'] == 1)]
 
 
 # If you wanted to, you could just keep on chaining the booleans together. Let's add on where the abv is greater than 14.
 
 
 
-wine[(wine['magnesium'] < 100) & (wine['wine_type'] == 1) & (wine['abv'] > 14)]
+#print wine[(wine['magnesium'] < 100) & (wine['wine_type'] == 1) & (wine['abv'] > 14)]
 
 
 # Another method of selecting data is using the isin() function. If you pass in a list to isin(), it will return a DataFrame of booleans. True means that the value at that index is in the list you passed into isin().
@@ -317,10 +311,10 @@ wine[(wine['magnesium'] < 100) & (wine['wine_type'] == 1) & (wine['abv'] > 14)]
 
 
 
-auto_mpg_5 = auto_mpg.head()
+#print auto_mpg_5 = auto_mpg.head()
 
 vals = [8, 150, 12.0, 'ford torino']
-auto_mpg_5.isin(vals)
+#print auto_mpg_5.isin(vals)
 
 
 # If it says 'True', it means that one of the values from the vals list occurs there.
@@ -376,28 +370,28 @@ auto_mpg_5.isin(vals)
 
 
 
-wine.groupby('wine_type')
+#print wine.groupby('wine_type')
 
 
 # Not so interesting yet. This object has some attributes you can access. We can get lists of which rows are in which group by using the groups attribute:
 
 
 
-wine.groupby('wine_type').groups
+#print wine.groupby('wine_type').groups
 
 
 # The dataset was in order by wine_type to begin with, so that makes sense. To get just the keys, add the .keys() function to the end of that line.
 
 
 
-wine.groupby('wine_type').groups.keys()
+#print wine.groupby('wine_type').groups.keys()
 
 
 # Let's group our auto_mpg dataset by cylinders, just for contrast.
 
 
 
-auto_mpg.groupby('cylinders').groups
+#print auto_mpg.groupby('cylinders').groups
 
 
 # You can see we have four observations with three cylinders, many more with four, and so on.
@@ -406,7 +400,7 @@ auto_mpg.groupby('cylinders').groups
 
 
 
-wine.groupby('wine_type').mean()
+#print wine.groupby('wine_type').mean()
 
 
 # So, the mean abv for wine with type 1 is 13.74, type 2 is 12.27, type 3 is 13.15. The mean malic_acid for wine with type 1 is 2.01, and so on. So, with one line of code, we're able to apply a function to the entire dataset and see what's going on within different groups.
@@ -417,14 +411,14 @@ wine.groupby('wine_type').mean()
 
 wine_type_mean = wine.groupby('wine_type').mean()
 
-wine_type_mean.loc[2, 'abv']
+#print wine_type_mean.loc[2, 'abv']
 
 
 # It's also possible to apply multiple functions to the entire DataFrame using the agg() function. Let's get not only the mean, but the count and the standard deviation as well for each value in the DataFrame, still grouping by wine_type.
 
 
 
-wine.groupby('wine_type').agg(['mean', 'count', 'std'])
+#print wine.groupby('wine_type').agg(['mean', 'count', 'std'])
 
 
 # It's also possible to run different functions on different columns. Let's get the mean for abv, the standard deviation for ash, and the sum of the values for hue. To do this, you'll need to create a dictionary with these functions, with the column names as the dictionary keys.
@@ -433,7 +427,7 @@ wine.groupby('wine_type').agg(['mean', 'count', 'std'])
 
 multiple_funcs = {'abv': mean, 'ash': std, 'hue': sum}
 
-wine.groupby('wine_type').agg(multiple_funcs)
+#print wine.groupby('wine_type').agg(multiple_funcs)
 
 
 # ## Lesson: Groupby galore
@@ -442,8 +436,8 @@ wine.groupby('wine_type').agg(multiple_funcs)
 
 
 
-# Let's group credit_approval by column G.
-credit_approval_group = # write the code here
+# Let's group credit_approval by column G. Uncomment and fill in.
+#credit_approval_group = write the code here
 
 
 
@@ -484,15 +478,15 @@ data.append({'col1': 'dude', 'col2': 'dude'}, ignore_index=True)
 
 
 data['col3'] = ['how', 'do', 'you', 'like', 'oscon']
-data
+#print data
 
 
-# However, this will not work if your new column in a different length than the original DataFrame.
+# However, this will not work if your new column in a different length than the original DataFrame. Uncomment this and run it, and you'll get an error here.
 
 
 
-data['col4'] = ['I', 'am', 'too', 'short']
-data
+#data['col4'] = ['I', 'am', 'too', 'short']
+#print data
 
 
 # ### Merge
@@ -502,7 +496,7 @@ data
 
 
 tacos = pd.read_csv('../data/tacos.csv')
-tacos
+#print tacos
 
 
 # Let's also look at an imaginary taco toppings dataset:
@@ -510,14 +504,13 @@ tacos
 
 
 taco_toppings = pd.read_csv('../data/taco_toppings.csv')
-taco_toppings
+#print taco_toppings
 
 
 # Notice that we have a unique identifier in each dataset: the name column. We have the same five people. Let's merge these DataFrames together. You don't even need to pass the key to merge; merge() will automatically infer which key to use based on if it exists in both DataFrames. 
 
 
-
-pd.merge(tacos, taco_toppings)
+#print pd.merge(tacos, taco_toppings)
 
 
 # By default, merge() performs a left outer join, which means it takes the key from the "left" DataFrame - the DataFrame that is passed in as the first parameter - and matches the right to it.
@@ -529,14 +522,14 @@ pd.merge(tacos, taco_toppings)
 
 
 tacos = tacos.append({'name': 'Luka', 'restaurant': 'Tres Carnes', 'number_of_tacos': 7, 'score': 3.8}, ignore_index=True)
-tacos
+#print tacos
 
 
 # Now, let's do a full outer merge.
 
 
 
-pd.merge(tacos, taco_toppings, how='outer')
+#print pd.merge(tacos, taco_toppings, how='outer')
 
 
 # You can see that the entire tacos DataFrame has been merged, even though 'Luka' does not exist in the taco_toppings DataFrame.
@@ -545,7 +538,7 @@ pd.merge(tacos, taco_toppings, how='outer')
 
 
 
-pd.merge(tacos, taco_toppings, how='right')
+#print pd.merge(tacos, taco_toppings, how='right')
 
 
 # ### Join
@@ -555,21 +548,21 @@ pd.merge(tacos, taco_toppings, how='right')
 
 
 taco_extra = pd.read_csv('../data/taco_extra.csv')
-taco_extra
+#print taco_extra
 
 
 # It's easy to join this to our taco DataFrame.
 
 
 
-tacos.join(taco_extra)
+#print tacos.join(taco_extra)
 
 
 # You can also specify how to join. The default is outer, but we can change it to inner and Luka will be left out again.
 
 
 
-tacos.join(taco_extra, how='inner')
+#print tacos.join(taco_extra, how='inner')
 
 
 # It's possible to join more than two DataFrames at a time. Let's slice off the name column from taco_toppings.
@@ -578,14 +571,14 @@ tacos.join(taco_extra, how='inner')
 
 taco_toppings_noname = taco_toppings.iloc[:, 1:]
 
-taco_toppings_noname
+#print taco_toppings_noname
 
 
 # Joining this frame with tacos and taco_extra is as easy as chaining two joins together. Again, it's all an outer join, so even though there's no toppings or extra data for Luka, he's still included in the DataFrame.
 
 
 
-tacos.join(taco_toppings_noname).join(taco_extra)
+#print tacos.join(taco_toppings_noname).join(taco_extra)
 
 
 # ## Lesson: Let's merge some dataframes!
@@ -632,7 +625,7 @@ pizza_extra = pd.read_csv('../data/pizza_extra.csv')
 
 
 
-pd.pivot_table(auto_mpg, values='weight', rows='model', cols='cylinders')
+#print pd.pivot_table(auto_mpg, values='weight', rows='model', cols='cylinders')
 
 
 # If a cell contains NaN, it means that that combination doesn't exist within the DataFrame.
@@ -643,14 +636,14 @@ pd.pivot_table(auto_mpg, values='weight', rows='model', cols='cylinders')
 
 
 
-pd.pivot_table(auto_mpg, values='weight', rows=['model', 'origin'], cols='cylinders')
+#print pd.pivot_table(auto_mpg, values='weight', rows=['model', 'origin'], cols='cylinders')
 
 
 # You can apply different aggregate functions to a pivot table. Let's look at the total weight per model/cylinder combination.
 
 
 
-pd.pivot_table(auto_mpg, values='weight', rows='model', cols='cylinders', aggfunc='sum')
+#print pd.pivot_table(auto_mpg, values='weight', rows='model', cols='cylinders', aggfunc='sum')
 
 
 # ## Lesson: let's pivot!

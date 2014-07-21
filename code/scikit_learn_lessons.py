@@ -83,7 +83,7 @@ wine_data_train[0]
 
 
 
-print len(wine_data), len(wine_data_train)
+#print len(wine_data), len(wine_data_train)
 
 
 # Now we can fit kNN to our training data. This is pretty easy. We create our estimator object and then use the fit() function to fit the algorithm to our data.
@@ -100,14 +100,14 @@ knn.fit(wine_data_train, wine_labels_train)
 
 
 
-knn.predict(wine_data_test)
-
+pred = knn.predict(wine_data_test)
+#print pred
 
 # Let's look at the real labels.
 
 
 
-wine_labels_test
+#print wine_labels_test
 
 
 # You can see that there are some differences between the predictions and the actual labels. Let's actually calculate how accurate our classifier is. We can do that using cross-validation. Cross-validation is a method that takes a dataset, randomly splits it into training and test sets, and computes how accurate the model is by checking it against the real labels. It does this multiple times, and splits the dataset differently each time. 
@@ -118,7 +118,7 @@ wine_labels_test
 
 from sklearn.cross_validation import cross_val_score
 
-cross_val_score(knn, wine_data, wine_labels, cv=5)
+#print cross_val_score(knn, wine_data, wine_labels, cv=5)
 
 
 # So our model is approximately 70% accurate. That's not so great, but you get the idea.
@@ -135,16 +135,16 @@ iris = load_iris()
 iris_data = iris.data
 iris_labels = iris.target
 
-# Can you split the data into training and test sets?
+# Can you split the data into training and test sets? Uncomment and fill in.
 
-iris_data_train, iris_data_test, #...fill in the rest!
-
-
+#iris_data_train, iris_data_test, ...fill in the rest!
 
 
-# Now, let's use the training data and labels to train our model.
 
-knn_iris = #fill in the rest
+
+# Now, let's use the training data and labels to train our model. Uncomment and fill in.
+
+#knn_iris = fill in the rest
 
 
 
@@ -181,21 +181,21 @@ from sklearn.naive_bayes import GaussianNB
 
 gnb = GaussianNB()
 gnb.fit(wine_data_train, wine_labels_train)
-gnb.predict(wine_data_test)
-
+gnb_pred = gnb.predict(wine_data_test)
+#print gnb_pred
 
 # Well, that was easy! Let's look at the real test labels again.
 
 
 
-wine_labels_test
+#print wine_labels_test
 
 
 # And let's cross-validate again. Let's only run it four times.
 
 
 
-cross_val_score(gnb, wine_data_train, wine_labels_train, cv=4)
+#print cross_val_score(gnb, wine_data_train, wine_labels_train, cv=4)
 
 
 # Wow! This classifier does much better on this dataset.
@@ -255,7 +255,7 @@ gnb_digits = GaussianNB()
 
 wine_data_mag = wine_data.loc[:, ['magnesium', 'color']]
 wine_data_abv = wine_data.loc[:, 'abv']
-wine_data_mag.head()
+#print wine_data_mag.head()
 
 
 # And, as always, let's split up the data. Our target values are going to be the continuous abv values.
@@ -267,7 +267,6 @@ wine_mag_train, wine_mag_test, wine_abv_train, wine_abv_test = train_test_split(
 
 # Then, we fit the model to our data.
 
-# In[62]:
 
 from sklearn.linear_model import LinearRegression
 
@@ -277,23 +276,22 @@ lr.fit(wine_mag_train, wine_abv_train)
 
 # And finally, we predict.
 
-# In[63]:
 
-lr.predict(wine_mag_test)
-
+lr_pred = lr.predict(wine_mag_test)
+#print lr_pred
 
 # Let's compare those predictions to the actual abv values.
 
 
 
-wine_abv_test
+#print wine_abv_test
 
 
 # We can check the accuracy of our linear regression model by using the score() function. The score() function returns the R^2 coefficient, which is a measure of how far away from the actual values are predictions were. The closer to 1, the better the regression model
 
 
 
-lr.score(wine_mag_test, wine_abv_test)
+#print lr.score(wine_mag_test, wine_abv_test)
 
 
 # So our score is rather low.

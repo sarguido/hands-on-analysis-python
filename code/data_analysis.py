@@ -113,7 +113,7 @@ from sklearn.feature_extraction import DictVectorizer
 
 dv = DictVectorizer()
 transformed_data = dv.fit_transform(census_data).toarray()
-transformed_data
+#print transformed_data
 
 
 # Now that we've done that, let's encode the labels.

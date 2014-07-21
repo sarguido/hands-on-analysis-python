@@ -2,10 +2,6 @@
 # coding: utf-8
 
 
-
-get_ipython().magic(u'pylab inline')
-
-
 # # matplotlib (code file matplotlib_lessons.py)
 # 
 # ## The importance of communicating your results
@@ -30,8 +26,6 @@ get_ipython().magic(u'pylab inline')
 # 
 # Plotting is really easy in matplotlib. Let's make a scatterplot of our wine data, of the abv and color features.
 
-
-
 import pandas as pd
 import matplotlib.pyplot as plt
 
@@ -40,7 +34,7 @@ wine = pd.read_csv('../data/wine.csv')
 # scatterplot of that data
 
 plt.scatter(wine.abv, wine.color)
-plt.show()
+#plt.show()
 
 
 # As you can see, it's very easy to feed data from Pandas into matplotlib.
@@ -64,20 +58,20 @@ lr.fit(wine_mag_train, wine_abv_train)
 # Then, we'll plot our predicted regression line.
 
 
-
+plt.clf()
 plt.scatter(wine_data_mag.magnesium, wine_data_abv, color='black')
 plt.plot(wine_mag_test, lr.predict(wine_mag_test), color='green',
          linewidth=3)
-plt.show()
+#plt.show()
 
 
 # Another easy plot to make is a bar chart. Let's look at the distribution of wine_types in the wine DataFrame. We're going to get the counts using the value_counts() function from Pandas, and then split up the index from those counts.
 
 
-
+plt.clf()
 wine_type = wine.loc[:, 'wine_type'].value_counts()
 plt.bar(wine_type.index, wine_type.values)
-plt.show()
+#plt.show()
 
 
 # We have a pretty good value distribution.
@@ -85,10 +79,10 @@ plt.show()
 # Making a histogram is also pretty simple. Let's look at the breakdown of abv across the wine dataset. Histograms group data into counts by values, or into bins. With the hist() function, you can set the number of bins. The default is 10.
 
 
-
+plt.clf()
 wine_abv = wine.loc[:, 'abv']
 plt.hist(wine_abv, bins=14, color='red')
-plt.show()
+#plt.show()
 
 
 # Let's plot the predicted values for wine type against the real values for wine type. First, we'll create our classifier again.
@@ -118,9 +112,10 @@ y = [pred.count(1), pred.count(2), pred.count(3)]
 wine_test = list(wine_labels_test)
 y2 = [wine_test.count(1), wine_test.count(2), wine_test.count(3)]
 
+plt.clf()
 plt.bar(x2, y, width=0.2)
 plt.bar(x, y2, width=0.2, color='green', align='center')
-
+#plt.show()
 
 # Our kNN classifier doesn't look too shabby!
 # 
@@ -131,40 +126,40 @@ plt.bar(x, y2, width=0.2, color='green', align='center')
 # You've already seen that it's easy to change the color, using the 'color' parameter in each of the various plot functions. This parameter takes a string, and that can be a color name like red or blue, or a hex string:
 
 
-
+plt.clf()
 plt.hist(wine_abv, bins=14, color='#CC00FF')
-plt.show()
+#plt.show()
 
 
 # Let's add axis labels.
 
 
-
+plt.clf()
 plt.hist(wine_abv, bins=14, color='#CC00FF')
 plt.xlabel('abv')
 plt.ylabel('counts')
-plt.show()
+#plt.show()
 
 
 # Let's take our regression plot and make it look more interesting.
 
 
-
+plt.clf()
 plt.scatter(wine_data_mag.magnesium, wine_data_abv, color='blue', marker='*')
 plt.plot(wine_mag_test, lr.predict(wine_mag_test), 'g^',
          linewidth=2)
-plt.show()
+#plt.show()
 
 
 # We now have blue stars for our plot points and green triangles for our regression line. Let's add a legend that tells us that the stars signify our wine data.
 
 
-
+plt.clf()
 scat = plt.scatter(wine_data_mag.magnesium, wine_data_abv, color='blue', marker='*')
 plt.plot(wine_mag_test, lr.predict(wine_mag_test), 'g^',
          linewidth=2)
 plt.legend([scat], ['wine data'])
-plt.show()
+#plt.show()
 
 
 # ## Lesson: make some plots!
@@ -174,25 +169,29 @@ plt.show()
 # Using the auto_mpg DataFrame, come up with a scatter plot for weight and mpg.
 
 auto_mpg = pd.read_csv('../data/auto_mpg.txt', delimiter="\t")
-
+plt.clf()
+# add your code here
 
 
 
 
 # Can you add weight and mpg axis labels to your plot?
-
+plt.clf()
+# add your code here
 
 
 
 
 # Can you make a histogram of mpg? Can you change the color to something other than that awful blue?
-
+plt.clf()
+# add your code here
 
 
 
 
 # Make a plot of anything you want.
-
+plt.clf()
+# add your code here
 
 
 # # For those using IPython Notebook/Wakari/NBViewer: Go to the data_analysis notebook!
