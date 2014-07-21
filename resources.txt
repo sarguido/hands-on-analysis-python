@@ -1,0 +1,7 @@
+Favorite resources
+
+Pandas:
+
+Scikit-learn:
+
+Matplotlib:
