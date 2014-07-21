@@ -3,6 +3,11 @@ MarkupSafe==0.23
 backports.ssl-match-hostname==3.4.0.2
 certifi==14.05.14
 ipython==2.1.0
+numpy==1.8.1
+pandas==0.14.1
+python-dateutil==2.2
+pytz==2014.4
 pyzmq==14.3.1
+six==1.7.3
 tornado==4.0
 wsgiref==0.1.2
