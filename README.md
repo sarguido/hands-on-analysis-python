@@ -45,3 +45,21 @@ If none of these options work, or you just want to watch now and code later, you
 - Data analysis:
 
 
+# FAQs
+
+- HEY, why didn't you cover THAT THING?!
+- Because I didn't, okay?! I only had three hours! Three hours is not enough. You could do a six hour workshop on each tool and still not cover everything.
+
+- Your visualizations are NOT great.
+- Yes, I know...but now you know where to start to make them better!
+
+- But really, why didn't you cover unsupervised learning/getting rid of missing values/making time series plots/etc etc?
+- Aw man! There are just so many things!
+
+- What's your twitter handle again?
+- @sarah_guido
+
+- What do you tweet about?
+- Python things, data things, and other random things.
+
+
