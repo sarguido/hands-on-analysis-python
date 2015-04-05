@@ -1,21 +1,25 @@
 hands-on-analysis-python
 ========================
 
-OSCON 2014
+PyCon 2015, previously OSCON 2014
 
+# Options for installation
+
+### Option 1: Install Anaconda.
+
+Anaconda is a distribution of a bunch of awesome scientific Python tools that I highly recommend. I use it myself. If you haven't installed Anaconda, go here: https://store.continuum.io/cshop/anaconda/
+
+### Option 2: pip
+
+Once you've cloned or downloaded the repo, you can simply pip install the required tools using requirements.txt. Once in the directory, open the terminal/command line and cd into hands-on-analysis-python/ and type: <code>pip install -r requirements.txt</code>
 
 # Options for running
-
-### Option 0: Install Anaconda.
-
-If you haven't installed Anaconda, go here: https://store.continuum.io/cshop/anaconda/
 
 ### Option 1: IPython Notebook
 
 If you have installed a distribution like Anaconda or Enthought, you have IPython notebook. To run IPython notebook and to follow along:
 
 - git clone this repo OR download it as a zip and unzip it to your Desktop
-- open the terminal/command line and cd into hands-on-analysis-python/ and type: <code>pip install -r requirements.txt</code>
 - open the terminal/command line and cd into hands-on-analysis-python/notebooks
 - in your terminal, type: <code>ipython notebook --pylab</code> 
 
@@ -54,17 +58,6 @@ https://docs.google.com/document/d/1tY6ifr4m4h2Ri445Vro1ZKr7Kap0X1IcI2OGl7IDaU0/
 Q: HEY, why didn't you cover THAT THING?!
 
 A: Because I didn't, okay?! I only had three hours! Three hours is not enough. You could do a six hour workshop on each tool and still not cover everything.
-
-
-Q: Your visualizations are NOT great.
-
-A: Yes, I know...but now you know where to start to make them better!
-
-
-Q: But really, why didn't you cover unsupervised learning/getting rid of missing values/making time series plots/etc etc?
-
-A: Aw man! There are just so many things!
-
 
 Q: What's your twitter handle again?
 
