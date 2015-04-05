@@ -15,14 +15,15 @@ If you haven't installed Anaconda, go here: https://store.continuum.io/cshop/ana
 If you have installed a distribution like Anaconda or Enthought, you have IPython notebook. To run IPython notebook and to follow along:
 
 - git clone this repo OR download it as a zip and unzip it to your Desktop
+- open the terminal/command line and cd into hands-on-analysis-python/ and type: <code>pip install -r requirements.txt</code>
 - open the terminal/command line and cd into hands-on-analysis-python/notebooks
-- in your terminal, type: ipython notebook --pylab 
+- in your terminal, type: <code>ipython notebook --pylab</code> 
 
 ### Option 2: Code files
 
 If you didn't install these tools with a distribution, you can still run the code files in the code/directory in your terminal. You'll have to uncomment the print statements, and recomment if you wish, as we go.
 
-To run, cd into hands-on-analysis-python/code and type python pandas_lessons.py
+To run, cd into hands-on-analysis-python/code and type: <code>python pandas_lessons.py</code>
 
 ### Option 3: Wakari.io
 
@@ -40,9 +41,8 @@ Wakari.io is a platform for web-based Python data analysis. It also allows you t
 If none of these options work, or you just want to watch now and code later, you can follow along below. It's not interactive, but you'll be able to see what's happening.
 
 - Pandas: http://nbviewer.ipython.org/gist/sarguido/b91f917a8cd443eb33ad
-- Scikit-learn:
-- Matplotlib:
-- Data analysis:
+- Scikit-learn: http://nbviewer.ipython.org/gist/sarguido/8191b91a79fbc41c439b
+- Matplotlib: http://nbviewer.ipython.org/gist/sarguido/b2862f4d5f5da5655c84
 
 # Questions
 
@@ -68,5 +68,5 @@ A: Aw man! There are just so many things!
 
 Q: What's your twitter handle again?
 
-A: @sarah_guido
+A: [@sarah_guido](http://twitter.com/sarah_guido)
 
