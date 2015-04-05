@@ -21,7 +21,7 @@ If you have installed a distribution like Anaconda or Enthought, you have IPytho
 
 - git clone this repo OR download it as a zip and unzip it to your Desktop
 - open the terminal/command line and cd into hands-on-analysis-python/notebooks
-- in your terminal, type: <code>ipython notebook --pylab</code> 
+- in your terminal, type: <code>ipython notebook</code> 
 
 ### Option 2: Code files
 
