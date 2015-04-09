@@ -15,3 +15,4 @@ scikit-learn==0.16.0
 scipy==0.15.1
 six==1.9.0
 tornado==4.1
+jsonschema==2.4.0
