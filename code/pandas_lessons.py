@@ -625,7 +625,7 @@ pizza_extra = pd.read_csv('../data/pizza_extra.csv')
 
 
 
-#print pd.pivot_table(auto_mpg, values='weight', rows='model', cols='cylinders')
+#print pd.pivot_table(auto_mpg, values='weight', index='model', columns='cylinders')
 
 
 # If a cell contains NaN, it means that that combination doesn't exist within the DataFrame.
@@ -636,14 +636,14 @@ pizza_extra = pd.read_csv('../data/pizza_extra.csv')
 
 
 
-#print pd.pivot_table(auto_mpg, values='weight', rows=['model', 'origin'], cols='cylinders')
+#print pd.pivot_table(auto_mpg, values='weight', index=['model', 'origin'], columns='cylinders')
 
 
 # You can apply different aggregate functions to a pivot table. Let's look at the total weight per model/cylinder combination.
 
 
 
-#print pd.pivot_table(auto_mpg, values='weight', rows='model', cols='cylinders', aggfunc='sum')
+#print pd.pivot_table(auto_mpg, values='weight', index='model', columnss='cylinders', aggfunc='sum')
 
 
 # ## Lesson: let's pivot!
