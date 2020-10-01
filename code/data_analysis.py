@@ -6,7 +6,8 @@
 # ## File I/O and exploring the data
 
 
-import pandas as pd
+# import pandas as pd
+import pandas as np
 
 f = '../data/census_data.csv'
 
