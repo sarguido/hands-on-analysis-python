@@ -1,4 +1,4 @@
-hands-on-analysis-python
+hands-on-analysis-python install anaconda 
 ========================
 
 PyCon 2015, previously OSCON 2014
