@@ -9,7 +9,7 @@ PyCon 2015, previously OSCON 2014
 
 Anaconda is a distribution of a bunch of awesome scientific Python tools that I highly recommend. I use it myself. If you haven't installed Anaconda, go here: https://store.continuum.io/cshop/anaconda/
 
-### Option 2: pip
+### Option 2: Pip
 
 Once you've cloned or downloaded the repo, you can simply pip install the required tools using requirements.txt. Once in the directory, open the terminal/command line and cd into hands-on-analysis-python/ and type: <code>pip install -r requirements.txt</code>
 
