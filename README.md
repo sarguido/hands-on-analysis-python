@@ -7,7 +7,7 @@ PyCon 2015, previously OSCON 2014
 
 ### Option 1: Install Anaconda.
 
-Anaconda is a distribution of a bunch of awesome scientific Python tools that I highly recommend. I use it myself. If you haven't installed Anaconda, go here: https://store.continuum.io/cshop/anaconda/
+Anaconda is a distribution of a bunch of awesome scientific Python tools that I highly recommend. I use it myself. If you haven't installed Anaconda, go here: https://www.anaconda.com/
 
 ### Option 2: pip
 
