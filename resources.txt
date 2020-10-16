@@ -1,7 +1,7 @@
-Favorite resources
+Favorite resources:
 
-Pandas:
+-> Pandas
 
-Scikit-learn:
+-> Scikit-learn
 
-Matplotlib:
+-> Matplotlib
