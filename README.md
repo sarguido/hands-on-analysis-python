@@ -1,4 +1,4 @@
-hands-on-analysis-python
+Hands-on-analysis-python
 ========================
 
 PyCon 2015, previously OSCON 2014
