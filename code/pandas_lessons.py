@@ -88,7 +88,7 @@ combine_series = pd.DataFrame([series_2, series_3])
 #print combine_series
 
 
-# Notice how in column 'b', we have two kinds of data. If a column in a DataFrame contains multiple types of data, the data type (or dtype) of the column will be chosen to accomodate all of the data. We can look at the data types of different columns with the dtypes attribute. Object is the most general, which is what has been chosen for column 'b'.
+# Notice how in column 'b', we have two kinds of data. If a column in a DataFrame contains multiple types of data, the data type (or dtype) of the column will be chosen to accommodate all of the data. We can look at the data types of different columns with the dtypes attribute. Object is the most general, which is what has been chosen for column 'b'.
 
 
 
@@ -116,7 +116,7 @@ wine = pd.read_csv('../data/wine.csv')
 #print wine.head()
 
 
-# Reading in a text file is just as easy. Make sure to pass in '\t' to the delimter parameter.
+# Reading in a text file is just as easy. Make sure to pass in '\t' to the delimiter parameter.
 
 
 
