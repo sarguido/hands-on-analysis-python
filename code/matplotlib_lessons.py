@@ -6,7 +6,7 @@
 # 
 # ## The importance of communicating your results
 # 
-# So, you've done your preprocessing, and you've doen your analysis. Now, you have to communicate your results. Often, you're going to be communicating with people who aren't programmers. Data visualization is a great way to communicate your analyses in clear, meaningful ways. It also allows you to literally see what's going on in your data. (I should note that data visualization is often a great exploratory step, because again, you get to see what's going on in your data.)
+# So, you've done your preprocessing, and you've done your analysis. Now, you have to communicate your results. Often, you're going to be communicating with people who aren't programmers. Data visualization is a great way to communicate your analyses in clear, meaningful ways. It also allows you to literally see what's going on in your data. (I should note that data visualization is often a great exploratory step, because again, you get to see what's going on in your data.)
 # 
 # One of the most important parts of visualization is choosing the best plot for your data. A great visualization shouldn't hide the analysis you've made but enhance it. It doesn't have to fancy or complicated, just clear.
 # 

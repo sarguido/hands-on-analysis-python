@@ -5,7 +5,7 @@
 # 
 # ## A brief intro to machine learning
 # 
-# There's a fair bit of backround knowledge that's important to know before we dive into the code. The actual code is rather simple, but I want you to understand exactly what's going on.
+# There's a fair bit of background knowledge that's important to know before we dive into the code. The actual code is rather simple, but I want you to understand exactly what's going on.
 # 
 # ### What is machine learning?
 # 
@@ -49,11 +49,11 @@
 # 
 # ## k-Nearest Neighbors
 # 
-# The k-Nearest Neighbors (kNN) algorithm finds a predetermined number of "neighbor" samples that are closest in distance to a starting data point and makes predictions based on the distances. kNN predicts labels by looking at the labels of its nearest neighbors. The metric used to calcuate the distances between points can be any distance metric measure, such as the Euclidean metric or the Manhattan distance.
+# The k-Nearest Neighbors (kNN) algorithm finds a predetermined number of "neighbor" samples that are closest in distance to a starting data point and makes predictions based on the distances. kNN predicts labels by looking at the labels of its nearest neighbors. The metric used to calculate the distances between points can be any distance metric measure, such as the Euclidean metric or the Manhattan distance.
 # 
 # kNN is useful when your data is linear in nature and can therefore be measured with a distance metric. Also, kNN does well when the decision boundary (or the delineation between classes) is hard to identify. 
 # 
-# kNN comes with a couple of caveats. If the classes in your dataset are unevenly distributed, the highest-occuring label will tend to dominate predictions. Also, choosing the *k* of kNN can be tricky. Choosing *k* deserves its own three hour tutorial, so we'll just go with the defaults for today.
+# kNN comes with a couple of caveats. If the classes in your dataset are unevenly distributed, the highest-occurring label will tend to dominate predictions. Also, choosing the *k* of kNN can be tricky. Choosing *k* deserves its own three hour tutorial, so we'll just go with the defaults for today.
 # 
 # ### Classifying in scikit-learn: kNN
 # 
